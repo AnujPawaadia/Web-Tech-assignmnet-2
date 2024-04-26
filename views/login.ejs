@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pg1.css">
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+        .form_container
+        {
+            display: block;
+            position: fixed;
+            max-width: 300px;
+            /* width: 100%; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            z-index: 101;
+            background: #fff;
+            padding: 25px;
+            border:1px solid black;
+            border-radius: 12px;
+            box-shadow: rgba(0, 0, 0, 0.1);
+            opacity: 1;
+            /* pointer-events: none; */
+            transition: all 0.4s ease-out
+        }
+
+        .button {
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: auto;
+            /* right: 0%; */
+            background-color: orange ;
+            color:white;
+            margin-top: 30px;
+        }
+        .button:active {
+            transform: scale(1.12);
+        }
+
+    </style>
+</head>
+<body>
+    
+     <!-- Home -->
+     <section class="home">
+        <div class="form_container">
+            <i class="uil uil-times form_close"></i>
+            <!-- Login Form -->
+            <div class="form login_form">
+                <form id="loginForm" onsubmit="return validateLoginForm()" method="post">
+                    <h2>Login</h2>
+
+                    <div class="input_box">
+                        <input type="email" id="loginEmail" placeholder="Enter your email" required name="email"/>
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required  name="password"/>
+                        <i class="uil uil-lock password"></i>
+                        
+                    </div>
+
+                    <button type="submit" class="button">Login Now</button>
+
+                    <div class="login_signup">Don't have an account? <a href="register" id="signup">Signup</a></div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
